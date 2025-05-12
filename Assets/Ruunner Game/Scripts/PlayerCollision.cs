@@ -5,7 +5,7 @@ public class PlayerCollision : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Check if it collided with left/right wall by tag or name
-        if (other.CompareTag("LeftWall") || other.CompareTag("RightWall"))
+        if (other.CompareTag("LeftWall") || other.CompareTag("RightWall")|| other.CompareTag("Obstacle"))
         {
             Collide();
         }

@@ -169,11 +169,16 @@ MonoBehaviour:
   - {fileID: 6243508063153985625, guid: 9dbf8cc180e4f444db1b7f8e09d80be4, type: 3}
   - {fileID: 6243508063153985625, guid: 66c3c4b09a06a6b419e788929f1a92f3, type: 3}
   - {fileID: 6243508063153985625, guid: 3e018c0c46a8df84696be567889e76ba, type: 3}
-  initialTracks: 5
+  obstaclePrefabs:
+  - {fileID: 5826865288435467801, guid: cdcdd057708af7e40ab51df1b7731852, type: 3}
+  - {fileID: 5826865288435467801, guid: cdcdd057708af7e40ab51df1b7731852, type: 3}
+  - {fileID: 5826865288435467801, guid: cdcdd057708af7e40ab51df1b7731852, type: 3}
+  - {fileID: 5826865288435467801, guid: cdcdd057708af7e40ab51df1b7731852, type: 3}
+  - {fileID: 5826865288435467801, guid: cdcdd057708af7e40ab51df1b7731852, type: 3}
   player: {fileID: 1875264275}
   trackLength: 30
-  maxTracksOnScreen: 7
   spawnThreshold: 25
+  obstacleChance: 0.5
 --- !u!4 &1875264275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8441985585539794055, guid: 57d0dbef8e72a5f45b92d5109c38b4e5, type: 3}
@@ -392,6 +397,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 58719392038077768, guid: 57d0dbef8e72a5f45b92d5109c38b4e5, type: 3}
+      propertyPath: m_Height
+      value: 1.7665904
+      objectReference: {fileID: 0}
+    - target: {fileID: 58719392038077768, guid: 57d0dbef8e72a5f45b92d5109c38b4e5, type: 3}
+      propertyPath: m_Center.y
+      value: 0.8974875
+      objectReference: {fileID: 0}
     - target: {fileID: 5717097347976099246, guid: 57d0dbef8e72a5f45b92d5109c38b4e5, type: 3}
       propertyPath: laneLimit
       value: 3.8
