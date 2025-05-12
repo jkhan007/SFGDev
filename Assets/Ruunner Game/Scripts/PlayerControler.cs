@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class PlayerControler : MonoBehaviour
 {
-    public float moveSpeed = 10f;
-    public float laneLimit = 3f;
-    public float sensitivity = 0.01f;
-    public float smoothTime = 0.1f; // Smoothness
+    public float forwardSpeed = 5f;       // Forward movement speed
+    public float horizontalSpeed = 10f;   // Horizontal movement speed
+    public float laneLimit = 3f;          // How far left/right player can move
+    public float sensitivity = 0.01f;     // Swipe sensitivity
+    public float smoothTime = 0.1f;       // Smoothing time for horizontal movement
 
     private Vector2 lastTouchPosition;
     private bool isDragging = false;
@@ -23,7 +24,10 @@ public class PlayerControler : MonoBehaviour
     {
         HandleInput();
 
-        // Smoothly move toward target X
+        // Move forward constantly
+        transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+
+        // Smooth horizontal movement
         float newX = Mathf.SmoothDamp(transform.position.x, targetX, ref velocityX, smoothTime);
         transform.position = new Vector3(newX, transform.position.y, transform.position.z);
     }
@@ -76,4 +80,5 @@ public class PlayerControler : MonoBehaviour
         targetX += deltaX * sensitivity;
         targetX = Mathf.Clamp(targetX, -laneLimit, laneLimit);
     }
+
 }
