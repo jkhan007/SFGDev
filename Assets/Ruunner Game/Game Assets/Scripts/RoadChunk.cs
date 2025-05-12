@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class RoadChunk : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Header(" Chunks Settings ")]
+    public float length;
 
-    // Update is called once per frame
-    void Update()
+    [Header(" Gizmos ")]
+    public Color gizmosColor;
+
+    private void OnDrawGizmos()
     {
-        
+
+        Vector3 center = transform.position + (length / 2 * Vector3.forward);
+        Vector3 size = new Vector3(20, 20, length);
+
+        Gizmos.color = gizmosColor;
+        Gizmos.DrawWireCube(center, size);
+
     }
 }

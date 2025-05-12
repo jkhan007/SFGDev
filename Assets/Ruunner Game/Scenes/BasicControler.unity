@@ -119,6 +119,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &639525150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8f369d873af624a40a06b8725062aeb3, type: 3}
+  m_PrefabInstance: {fileID: 1432738377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &639525154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639525150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47c3a61877afba4b972b54c04448dfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  length: 5
+  gizmosColor: {r: 1, g: 0.7913189, b: 0.122641385, a: 0}
 --- !u!1001 &908541777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,6 +251,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8f369d873af624a40a06b8725062aeb3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a77f26893924940459a2a886b25c8561, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8f369d873af624a40a06b8725062aeb3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 689b6d66a42b5854a870de29df521b15, type: 2}
     - target: {fileID: 919132149155446097, guid: 8f369d873af624a40a06b8725062aeb3, type: 3}
       propertyPath: m_Name
       value: tile_01
@@ -239,7 +266,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8f369d873af624a40a06b8725062aeb3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 639525154}
   m_SourcePrefab: {fileID: 100100000, guid: 8f369d873af624a40a06b8725062aeb3, type: 3}
 --- !u!137 &1863406193
 SkinnedMeshRenderer:
@@ -931,7 +961,7 @@ Animator:
   m_GameObject: {fileID: 1874976563}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8c28075e6e1a5c34ca899fd618879dd4, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0be91e97b732a5b449077f8eda16e09d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7cb00673367ab4440808c03b2da4d581, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -956,7 +986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  laneLimit: 3
+  laneLimit: 4
   sensitivity: 0.01
   smoothTime: 0.5
 --- !u!1 &1874976513
@@ -1872,9 +1902,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 1.8664279
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.84756875, z: 0}
 --- !u!4 &1875264279
 Transform:
   m_ObjectHideFlags: 0
